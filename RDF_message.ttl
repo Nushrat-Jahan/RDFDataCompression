@@ -1,0 +1,29 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix qudt: <http://qudt.org/schema/qudt/>.
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+[] rdf:type sosa:Observation ;
+  sosa:hasFeatureOfInterest  <room> ;
+  sosa:observedProperty  <temperature> ;
+  sosa:resultTime "2023-11-22T14:25:00.000Z"^^xsd:dateTime ;
+  sosa:hasResult [ 
+    qudt:unit unit:DEG_C ; 
+    qudt:numericalValue "21.3"^^xsd:double ] .
+
+[] rdf:type sosa:Observation ;
+  sosa:hasFeatureOfInterest  <room> ;
+  sosa:observedProperty  <humidity> ;
+  sosa:resultTime "2023-11-22T14:25:00.000Z"^^xsd:dateTime ;
+  sosa:hasResult [ 
+    qudt:unit unit:PERCENT ; 
+    qudt:numericalValue "49.0"^^xsd:double ] .
+
+[] rdf:type sosa:Observation ;
+  sosa:hasFeatureOfInterest  <room> ;
+  sosa:observedProperty  <co2> ;
+  sosa:resultTime "2023-11-22T14:25:00.000Z"^^xsd:dateTime ;
+  sosa:hasResult [ 
+    qudt:unit unit:PPM ; 
+    qudt:numericalValue "854"^^xsd:integer ] .
